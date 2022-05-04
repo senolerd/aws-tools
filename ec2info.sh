@@ -75,7 +75,7 @@ EoF
 
 for label in ${metalist[@]}
 do
-    cat > $1 << EoF
+    cat >> $1 << EoF
             <div> 
                 <span class="label">$label:</span> <span class="value">$(curl 169.254.169.254/latest/meta-data/$label):</span> 
             </div>
@@ -86,7 +86,7 @@ done
 
 
 
-cat > $1 << EoF
+cat >> $1 << EoF
         </div>
     </body>
 </html>
