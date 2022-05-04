@@ -61,10 +61,12 @@ cat > $1 << EoF
 
     <body>
         <style>
+            body{margin:0;padding:0}
             :root { --color: #$color; --bgcolor: #$bgcolor }
             .main { color: var(--color); background-color: var(--bgcolor);  }
             .label { color: var(--color) }
             .value { color: var(--color); font-weight: bold; }
+            .line {padding:1rem}
         </style>
         <div class="main">
 EoF
@@ -74,7 +76,7 @@ EoF
 for label in ${metalist[@]}
 do
     cat >> $1 << EoF
-            <div> 
+            <div class="line"> 
                 <span class="label">$label:</span> <span class="value">$(curl 169.254.169.254/latest/meta-data/$label):</span> 
             </div>
 EoF
