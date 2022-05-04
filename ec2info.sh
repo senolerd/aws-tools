@@ -48,9 +48,6 @@ metalist=(
 
 
 
-
-
-
 cat > $1 << EoF
 <!DOCTYPE html>
 <html lang="en">
