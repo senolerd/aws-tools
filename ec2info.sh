@@ -72,7 +72,7 @@ cat > $1 << EoF
             .main { color: var(--color); background-color: var(--bgcolor);  }
             .label { color: var(--color) }
             .value { color: var(--color); font-weight: bold; }
-            .line {padding: 1rem .5rem; text-transform: capitalize}
+            .line {padding: .5rem  1rem; text-transform: capitalize}
         </style>
         <div class="main">
 EoF
