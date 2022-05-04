@@ -12,7 +12,7 @@ bgcolor=$c3$c2$c1'18'
 
 # [ec2-user@ip-172-31-12-137 ~]$ for item in $(curl 169.254.169.254/latest/meta-data); do echo $item ==> $(curl  169.254.169.254/latest/meta-data/$item); done
 
-# ami-id
+# ami-id .
 # ami-launch-index
 # ami-manifest-path
 # autoscaling/
@@ -21,30 +21,36 @@ bgcolor=$c3$c2$c1'18'
 # hostname .
 # identity-credentials/
 # instance-action
-# instance-id
+# instance-id ,
 # instance-life-cycle
-# instance-type
+# instance-type .
 # local-hostname .
-# local-ipv4
-# mac
+# local-ipv4 .
+# mac .
 # metrics/
 # network/
 # placement/
-# profile
+# profile .
 # public-hostname .
 # public-ipv4 .
 # public-keys/
-# reservation-id
-# security-groups
+# reservation-id .
+# security-groups .
 
 
 metalist=(
     "hostname" \
     "instance-id" \
+    "instance-type" \
     "local-hostname" \
     "local-ipv4" \
     "public-hostname" \
     "public-ipv4" \    
+    "profile" \  
+    "security-groups" \  
+    "reservation-id" \  
+    "ami-id" \  
+    "mac" \  
     )
 
 
@@ -66,7 +72,7 @@ cat > $1 << EoF
             .main { color: var(--color); background-color: var(--bgcolor);  }
             .label { color: var(--color) }
             .value { color: var(--color); font-weight: bold; }
-            .line {padding:.5rem}
+            .line {padding:.5rem; text-transform: capitalize}
         </style>
         <div class="main">
 EoF
