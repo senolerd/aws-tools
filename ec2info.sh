@@ -11,7 +11,7 @@ color="$c1$c2$c3"
 bg-color="$c3$c2$c1"
 # [ec2-user@ip-172-31-12-137 ~]$ for item in $(curl 169.254.169.254/latest/meta-data); do echo $item ==> $(curl  169.254.169.254/latest/meta-data/$item); done
 
-
+sd
 ami-id
 ami-launch-index
 ami-manifest-path
