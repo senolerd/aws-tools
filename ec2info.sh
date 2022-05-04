@@ -76,7 +76,9 @@ EoF
 for label in ${metalist[@]}
 do
     cat >> index.html << EoF
-                <div> <span class="label">$label:</span> </div>
+            <div> 
+                <span class="label">$label:</span> <span class="value">$(curl 169.254.169.254/latest/meta-data/$label):</span> 
+            </div>
 EoF
 
 done
