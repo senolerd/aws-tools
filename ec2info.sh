@@ -68,11 +68,12 @@ cat > $1 << EoF
     <body>
         <style>
             body{margin:0;padding:0}
-            :root { --color: #$color; --bgcolor: #$bgcolor }
+            :root { --color: #218169; --bgcolor: #69812118 }
             .main { color: var(--color); background-color: var(--bgcolor);  }
-            .label { color: var(--color) }
+            .label { color: var(--color); text-transform: capitalize }
             .value { color: var(--color); font-weight: bold; }
-            .line {padding: .5rem  1rem; text-transform: capitalize}
+            .line {background-color:#69812118; margin:.5rem; padding: .5rem 1rem}
+            
         </style>
         <div class="main">
 EoF
