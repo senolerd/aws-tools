@@ -7,8 +7,8 @@ c1=$(shuf -i 10-99 -n 1)
 c2=$(shuf -i 10-99 -n 1)
 c3=$(shuf -i 10-99 -n 1)
 
-color="$c1$c2$c3"
-bgcolor="$c3$c2$c1'18'"
+color=$c1$c2$c3
+bgcolor=$c3$c2$c1'18'
 
 # [ec2-user@ip-172-31-12-137 ~]$ for item in $(curl 169.254.169.254/latest/meta-data); do echo $item ==> $(curl  169.254.169.254/latest/meta-data/$item); done
 
