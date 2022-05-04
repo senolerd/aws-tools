@@ -88,6 +88,9 @@ done
 
 cat >> $1 << EoF
         </div>
+        <div> color: $color </div>
+        <div> bgcolor: $bgcolor </div>
+
     </body>
 </html>
 EoF
