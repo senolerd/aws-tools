@@ -56,37 +56,35 @@ for label in ${metalist[@]}
 
 
 
-cat << EoF
+cat > index.html << EoF
 
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
 
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
+    <body>
+        <div class="main">
 
-        <body>
-            <div class="main">
-                
+        </div>
 
-            </div>
+        <style>
+            :root { --color: $color; --bgcolor: $bg-color }
+            .main { color: var(--color); background-color: var(--bgcolor);  }
+            .label { color: var(--color) }
+            .value { color: var(--color) }
+        </style>
 
-            <style>
-                :root { --color: $color; --bgcolor: $bg-color }
-                .main { color: var(--color); background-color: var(--bgcolor);  }
-                .label { color: var(--color) }
-                .value { color: var(--color) }
-            </style>
+    </body>
 
-        </body>
-
-        </html>
-
-        </body>
     </html>
+
+    </body>
+</html>
 
 
 EoF
