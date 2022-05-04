@@ -66,7 +66,7 @@ cat > $1 << EoF
             .main { color: var(--color); background-color: var(--bgcolor);  }
             .label { color: var(--color) }
             .value { color: var(--color); font-weight: bold; }
-            .line {padding:1rem}
+            .line {padding:.5rem}
         </style>
         <div class="main">
 EoF
