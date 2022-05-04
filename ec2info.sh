@@ -63,7 +63,7 @@ cat > $1 << EoF
 
     <body>
         <style>
-            :root { --color: $color; --bgcolor: $bg-color }
+            :root { --color: #$color; --bgcolor: $bgcolor }
             .main { color: var(--color); background-color: var(--bgcolor);  }
             .label { color: var(--color) }
             .value { color: var(--color) }
