@@ -64,7 +64,7 @@ cat > $1 << EoF
             :root { --color: #$color; --bgcolor: #$bgcolor }
             .main { color: var(--color); background-color: var(--bgcolor);  }
             .label { color: var(--color) }
-            .value { color: var(--color);font-weight: bold; }
+            .value { color: var(--color); font-weight: bold; }
         </style>
         <div class="main">
 EoF
