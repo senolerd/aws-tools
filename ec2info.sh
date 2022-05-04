@@ -68,7 +68,7 @@ cat > $1 << EoF
     <body>
         <style>
             body{margin:0;padding:0}
-            :root { --color: $color; --bgcolor: $bgcolor }
+            :root { --color: #$color; --bgcolor: #$bgcolor }
             .main { color: var(--color); background-color: var(--bgcolor);  }
             .label { color: var(--color); text-transform: capitalize }
             .value { color: var(--color); font-weight: bold; }
