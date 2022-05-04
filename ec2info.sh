@@ -48,16 +48,10 @@ metalist=(
 
 
 
-for label in ${metalist[@]}
-    do
-        echo $label
-    done
-
 
 
 
 cat > index.html << EoF
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -68,25 +62,34 @@ cat > index.html << EoF
     </head>
 
     <body>
-        <div class="main">
-
-        </div>
-
         <style>
             :root { --color: $color; --bgcolor: $bg-color }
             .main { color: var(--color); background-color: var(--bgcolor);  }
             .label { color: var(--color) }
             .value { color: var(--color) }
         </style>
+        <div class="main">
+EoF
 
-    </body>
 
-    </html>
 
+for label in ${metalist[@]}
+do
+    cat >> index.html << EoF
+    <div> <span class="label">$label:</span> </div>
+EoF
+
+done
+
+
+
+
+
+
+cat >> index.html << EoF
+        </div>
     </body>
 </html>
-
-
 EoF
 
 
