@@ -51,7 +51,7 @@ metalist=(
 
 
 
-cat > index.html << EoF
+cat << EoF
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -75,7 +75,7 @@ EoF
 
 for label in ${metalist[@]}
 do
-    cat >> index.html << EoF
+    cat << EoF
             <div> 
                 <span class="label">$label:</span> <span class="value">$(curl 169.254.169.254/latest/meta-data/$label):</span> 
             </div>
@@ -88,7 +88,7 @@ done
 
 
 
-cat >> index.html << EoF
+cat << EoF
         </div>
     </body>
 </html>
