@@ -9,7 +9,7 @@ c3=$(shuf -i 10-99 -n 1)
 
 color=$c1$c2$c3
 bgcolor=$c3$c2$c1'18'
-deployment=""
+deployment="blue"
 
 # [ec2-user@ip-172-31-12-137 ~]$ for item in $(curl 169.254.169.254/latest/meta-data); do echo $item ==> $(curl  169.254.169.254/latest/meta-data/$item); done
 
@@ -77,6 +77,8 @@ cat > $1 << EoF
 
         </style>
         <div class="main">
+            <span class="label">Deployment Version:</span> <span class="value">$deployment</span> 
+
 EoF
 
 
@@ -95,6 +97,7 @@ done
 
 
 cat >> $1 << EoF
+
         </div>
     </body>
 </html>
