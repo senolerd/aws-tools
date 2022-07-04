@@ -77,7 +77,7 @@ cat > $1 << EoF
 
         </style>
         <div class="main">
-            <span class="label">Deployment Version:</span> <span class="value">$deployment</span> 
+            <span class="label">Deployment Version:</span> <span style="color:$deployment" class="value">$deployment</span> 
 
 EoF
 
