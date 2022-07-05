@@ -12,6 +12,9 @@ bgcolor=$c3$c2$c1'18'
 deployment="green"
 
 
+
+
+
 # ami-id .
 # ami-launch-index
 # ami-manifest-path
